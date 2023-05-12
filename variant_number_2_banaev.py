@@ -1,29 +1,16 @@
-# Юрий Банаев группа 2022-ФГиИБ-ПИ-1см
-# Вариант № 2
+# Вячеслав Белинский группа 2022-ФГиИБ-ПИ-1см
+# Вариант № 3
 
 import streamlit as st
 
-st.title('Пассажиры Титаника')
-if st.checkbox("Спасен?"):
-    save = '1'
-else:
-    save = '0'
-sex = st.radio("Пол:", ('Мужчина', 'Женщина'))
-if (sex == 'Мужчина'):
-    sex_titanic = 'male'
-else:
-    sex_titanic = 'female'
-with open(r"C:\Users\Cybernetics\PycharmProjects\Лабораторные_работы\laboratory_work_9\data.csv") as file:
-    name = []
-    age=[]
-    class_p = []
-    for line in file:
-        if line.split(',')[1] == save and line.split(',')[5] == sex_titanic:
-            name_titanic = [line.split(',')[3] + line.split(',')[4]]
-            name.append(name_titanic)
-            age_titanic = [line.split(',')[6]]
-            age.append(age_titanic)
-            class_p_titanic = [line.split(',')[2]]
-            class_p.append(class_p_titanic)
-            titanic = {'Имя':name,'Возраст':age,'Класс билета':class_p}
-st.dataframe(titanic)
+with open(r"C:\Users\Cybernetics\PycharmProjects\Лабораторные_работы\laboratory_work_12\data.csv") as file:
+    next(file);
+    for row in file:
+        rows_data = file.readlines();
+
+def getting_a_list_of_mens(rows_data, min_value_age, max_value_age, gender_of_the_person):
+    if (st.button("Найти")):
+     for row in rows_data:
+        if row.split(',')[6]>=min_value_age and row.split(',')[6]<=max_value_age and row.split(',')[5]==gender_of_the_person:
+            st.text (row.rstrip().split(',')[3] + ' - ' + row.rstrip().split(',')[4] + ' - ' + row.rstrip().split(',')[
+            6] + ' - ' + row.rstrip().split(',')[2]);
