@@ -3,7 +3,7 @@
 
 import streamlit as st
 
-with open(r"C:\Users\Cybernetics\PycharmProjects\Лабораторные_работы\laboratory_work_12\data.csv") as file:
+with open("data.csv") as file:
     next(file);
     for row in file:
         rows_data = file.readlines();

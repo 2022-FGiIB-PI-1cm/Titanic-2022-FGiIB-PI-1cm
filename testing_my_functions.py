@@ -2,7 +2,7 @@
 from main import *
 import os;
 def test_getting_a_list_of_mens_number_1 ():
-    assert os.path.isfile (r"C:\Users\Cybernetics\PycharmProjects\Лабораторные_работы\laboratory_work_12\data.csv") == True;
+    assert os.path.isfile ("data.csv") == True;
 
 def test_getting_a_list_of_mens_number_2 ():
     assert rows_data !=0;
