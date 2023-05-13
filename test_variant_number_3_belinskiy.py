@@ -4,6 +4,7 @@
 
 from main import *
 
+
 def test_getting_list_mens_1 ():
     rows_data = ['1,0,2,"Kirkland, Rev. Charles Leonard",male,57',
                  '2,0,1,"Kent, Mr. Edward Austin",male,58',
