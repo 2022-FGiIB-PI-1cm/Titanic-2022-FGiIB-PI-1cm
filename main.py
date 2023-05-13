@@ -1,7 +1,7 @@
 import streamlit as st;
 
-from variant_number_2_banaev import get_pass_list,data
-from variant_number_3_belinskiy import rows_data, getting_list_mens
+#from variant_number_2_banaev import get_pass_list,data
+#from variant_number_3_belinskiy import rows_data, getting_list_mens
 
 st.header("Лабораторная работа № 12, группа № 2022-ФГиИБ-ПИ-1см");
 
@@ -17,9 +17,7 @@ if variants == 'Вариант № 2 - Банаев Ю. А.':
 if variants == 'Вариант № 3 - Белинский В. А.':
     st.info("Для вывода имён, возрастов, классов билетов мужчин указанного возраста (от 30 до 60 лет) необходимо задать возрастной диапазон.");
     min_value_age = st.number_input("Введите минимальное значение возраста:", 30, 60, 30, 1, key=0);
-    min_value_age = str(min_value_age);
     max_value_age = st.number_input("Введите максимальное значение возраста:", 30, 60, 60, 1, key=1);
-    max_value_age = str(max_value_age);
     gender_person = 'male';
     if (st.button("Найти")):
         result_data = getting_list_mens(rows_data, min_value_age, max_value_age, gender_person);
