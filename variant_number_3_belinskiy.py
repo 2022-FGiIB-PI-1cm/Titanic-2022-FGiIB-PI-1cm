@@ -1,16 +1,14 @@
-# Вячеслав Белинский группа 2022-ФГиИБ-ПИ-1см
-# Вариант № 3
+#Лабораторная работа № 12, вариант № 3, Белинский В. А., группа № 2022-ФГиИБ-ПИ-1см
 
-import streamlit as st
 
 with open("data.csv") as file:
     next(file);
     for row in file:
         rows_data = file.readlines();
-
-def getting_a_list_of_mens(rows_data, min_value_age, max_value_age, gender_of_the_person):
-    if (st.button("Найти")):
-     for row in rows_data:
-        if row.split(',')[6]>=min_value_age and row.split(',')[6]<=max_value_age and row.split(',')[5]==gender_of_the_person:
-            st.text (row.rstrip().split(',')[3] + ' - ' + row.rstrip().split(',')[4] + ' - ' + row.rstrip().split(',')[
-            6] + ' - ' + row.rstrip().split(',')[2]);
+def getting_list_mens(rows_data, min_value_age, max_value_age, gender_person):
+    result_rows = [];
+    for row in rows_data:
+        rows = row.rstrip().split(",");
+        if rows[6]>=min_value_age and rows[6]<=max_value_age and rows[5]==gender_person:
+            result_rows += [rows[3] + ' ' + rows[4] + ', ' + rows[6] + ', ' + rows[2]];
+    return result_rows;

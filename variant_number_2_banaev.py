@@ -1,7 +1,6 @@
 # Юрий Банаев группа 2022-ФГиИБ-ПИ-1см
 # Вариант № 2
 
-import streamlit as st
 
 with open("data.csv") as file:
     data = file.readlines();

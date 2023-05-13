@@ -1,7 +1,7 @@
 import streamlit as st;
 
 from variant_number_2_banaev import get_pass_list,data
-from variant_number_3_belinskiy import rows_data, getting_a_list_of_mens
+from variant_number_3_belinskiy import rows_data, getting_list_mens
 
 st.header("Лабораторная работа № 12, группа № 2022-ФГиИБ-ПИ-1см");
 
@@ -20,5 +20,16 @@ if variants == 'Вариант № 3 - Белинский В. А.':
     min_value_age = str(min_value_age);
     max_value_age = st.number_input("Введите максимальное значение возраста:", 30, 60, 60, 1, key=1);
     max_value_age = str(max_value_age);
-    gender_of_the_person = 'male';
-    getting_a_list_of_mens(rows_data, min_value_age, max_value_age, gender_of_the_person);
+    gender_person = 'male';
+    if (st.button("Найти")):
+        result_data = getting_list_mens(rows_data, min_value_age, max_value_age, gender_person);
+        name_person = [];
+        age_person = [];
+        ticket_class = [];
+        for row in result_data:
+            rows = row.rstrip().split(",");
+            name_person += [rows[0]];
+            age_person += [rows[1]];
+            ticket_class += [rows[2]];
+            result_data = {'Ф. И. О.': name_person, 'Возраст': age_person, 'Класс билета': ticket_class};
+        st.table(result_data);
