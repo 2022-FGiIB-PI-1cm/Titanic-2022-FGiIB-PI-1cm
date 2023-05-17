@@ -2,7 +2,7 @@
 
 #Тесты
 
-from main import *
+from variant_number_3_belinskiy import getting_list_mens
 
 
 def test_getting_list_mens_1 ():
