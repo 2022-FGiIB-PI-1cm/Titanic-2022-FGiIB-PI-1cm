@@ -1,5 +1,5 @@
 # Тесты Банаева Ю. А.
-from main import get_pass_list
+from variant_number_2_banaev import get_pass_list
 
 def test_pass_list_one1():
     data = ['0,1,2,3,4,female,1', '1,0,2,3,4,male,1', '2,1,2,3,4,male,1']
