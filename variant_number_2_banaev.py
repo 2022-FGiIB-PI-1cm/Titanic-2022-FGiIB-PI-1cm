@@ -3,7 +3,7 @@
 
 
 with open("data.csv") as file:
-    data = file.readlines();
+    data = file.readlines()
 
 
 def get_pass_list(data,save,sex):
