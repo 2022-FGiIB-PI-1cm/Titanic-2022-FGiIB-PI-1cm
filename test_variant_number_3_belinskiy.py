@@ -20,7 +20,7 @@ def test_getting_list_mens_2():
                  '2,0,2,"Brown, Mr. Thomas William Solomon",male,60',
                  '3,0,1,"Weir, Col. John",male,60']
 
-    assert getting_list_mens (rows_data, '60', '60', 'male') == ['"Frolicher-Stehli  Mr. Maxmillian", 60, 1',
+    assert getting_list_mens(rows_data, '60', '60', 'male') == ['"Frolicher-Stehli  Mr. Maxmillian", 60, 1',
                                                                  '"Brown  Mr. Thomas William Solomon", 60, 2',
                                                                  '"Weir  Col. John", 60, 1']
 
@@ -30,4 +30,4 @@ def test_getting_list_mens_3():
                  '2,0,2,"Brown, Mr. Thomas William Solomon",male,60',
                  '3,0,1,"Weir, Col. John",male,60']
 
-    assert getting_list_mens (rows_data, '60', '60', 'female') == []
+    assert getting_list_mens(rows_data, '60', '60', 'female') == []
