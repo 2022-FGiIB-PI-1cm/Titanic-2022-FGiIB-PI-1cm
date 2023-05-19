@@ -6,7 +6,7 @@ with open("data.csv") as file:
     data = file.readlines()
 
 
-def get_pass_list(data,save,sex):
+def get_pass_list(data, save, sex):
     name = []
     age = []
     class_p = []
