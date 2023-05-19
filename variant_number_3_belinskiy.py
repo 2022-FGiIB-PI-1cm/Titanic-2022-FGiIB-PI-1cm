@@ -7,6 +7,7 @@ with open("data.csv") as file:
     for row in file:
         rows_data = file.readlines()
 
+
 def getting_list_mens(rows_data, min_value_age, max_value_age, gender_person):
     result_rows = []
     for row in rows_data:
