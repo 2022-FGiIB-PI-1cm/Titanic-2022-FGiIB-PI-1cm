@@ -5,9 +5,9 @@ name: Python application 2022-FGiIB-PI-1cm
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 permissions:
   contents: read
