@@ -2,6 +2,7 @@ import streamlit as st
 
 
 from variant_number_2_banaev import get_pass_list, data
+
 from variant_number_3_belinskiy import rows_data, getting_list_mens
 
 
