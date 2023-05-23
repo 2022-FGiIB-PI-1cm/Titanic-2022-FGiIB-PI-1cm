@@ -1,4 +1,4 @@
-# Тесты Банаева Ю. А.
+# Тесты Банаева Ю. А. 
 from variant_number_2_banaev import get_pass_list
 
 
